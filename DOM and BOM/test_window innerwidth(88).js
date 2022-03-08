@@ -1,0 +1,1 @@
+document.write(window.innerWidth);//width of window

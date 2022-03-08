@@ -1,0 +1,1 @@
+document.write(window.location);//Current URL of window object (or local file path)

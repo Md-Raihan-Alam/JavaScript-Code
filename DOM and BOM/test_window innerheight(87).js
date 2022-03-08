@@ -1,0 +1,1 @@
+document.write(window.innerHeight);//Height of window (excluding browser chrome/user interface) (in pixels)
