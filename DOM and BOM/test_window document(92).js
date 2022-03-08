@@ -1,1 +1,0 @@
-document.write(window.document);//Reference to document object, which is used to represent the current page contained in window

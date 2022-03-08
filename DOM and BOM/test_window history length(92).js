@@ -1,1 +1,0 @@
-document.write(window.history.length);//Number of items in hi story object for browser window or tab

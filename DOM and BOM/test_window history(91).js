@@ -1,1 +1,0 @@
-console.log(window.history);//Reference to history object for browser window or tab, which contains details of the pages that have been viewed in that window or tab

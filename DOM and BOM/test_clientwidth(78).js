@@ -1,1 +1,0 @@
-console.log(document.getElementById("file").clientWidth);//show the element width

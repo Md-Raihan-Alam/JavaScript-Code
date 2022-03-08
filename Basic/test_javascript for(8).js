@@ -1,1 +1,0 @@
-for(let i=1;i<=100;i++) console.log(i);//let is same as var
