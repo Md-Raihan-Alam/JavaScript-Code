@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    (function myFunc(){
+        console.log("Hello world");
+    })();
+    var myData=(function(){
+        return 10+20;
+    })();
+    console.log(myData)
+    var controller=(function(){
+        var a={
+            name:"Raihan",
+            id:221066,
+        };
+        return a;
+    })();
+    var interface=(function(){
+        return "hello "+controller.name;//can call like this
+    })();
+    console.log(interface);
+    var data=(function(num){
+        console.log(num);
+    })(10);
+</script>
+</html>

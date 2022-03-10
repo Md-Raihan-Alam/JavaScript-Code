@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var total=function(a,b){
+        return Number(a)+Number(b);
+    }
+    console.log("Total number is "+total(3,2));
+    function welcomeMsg(name){
+        console.log("Hello ",name);
+        return function order(menu){
+            console.log("Do you like "+menu+" "+name);
+        }
+    }
+    welcomeMsg("Raihan")("coffee");
+</script>
+</html>
