@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    //global context
+    console.log(this);/// global; point to windows
+    function helloThis(){
+        console.log(this);// windows
+    }
+    //object
+    var myCustomObj={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        msg:function(){
+            console.log(this);
+        }
+    };
+    myCustomObj.msg();// point to object
+    var myCustomObjTwo={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        msg:function(){
+            console.log("My name is: "+this.name);
+        }
+    };
+    myCustomObjTwo.msg();
+    var myCustomObjThree={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        anotherObj:{
+        name: "Alcurd Shank",
+        msg:function(){
+            console.log("My name is: "+this.name);
+        }
+        },
+    };
+    myCustomObjThree.anotherObj.msg();
+    var myCustomObjFour={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        anotherObj:{
+        name: "Alcurd Shank",
+        msg:function(){
+            console.log(this);
+        }
+        },
+    };
+    myCustomObjFour.anotherObj.msg();
+    //direct call->call
+    var anotherCustomObj={
+        name:"Zonayed Ahmed",
+        age:25,
+        job:"Teacher",
+        anotherObject:{
+            name:"Ahmed Zonayed",
+            value:function(){
+                console.log(this);
+            }
+        }
+    };
+    anotherCustomObj.anotherObject.value.call(anotherCustomObj);
+</script>
+</html>
