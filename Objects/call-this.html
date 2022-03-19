@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var myCustomObj={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        anotherObj:{
+            name:"Alcurd Shank",
+            value:function(){
+                console.log("My name is "+this.name);
+            }
+        }
+    };
+    myCustomObj.anotherObj.value.call(myCustomObj);
+    // we can also call it like this
+    var myCustomObjTwo={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        anotherObj:{
+            name:"Alcurd Shank",
+            value:function(){
+                console.log("My name is "+this.name);
+            }.call(myCustomObjTwo)
+        }
+    };
+    // we cal also call for different two object
+    var karim={
+        name:"Karim Rahman",
+        dob:1996,
+        age:function(currentYear){
+            console.log(this.name+" is "+(currentYear-this.dob)+" years old");
+        }
+    }
+    var rahim={
+        name:"Rahim Abdu",
+        dob:1986,
+    }
+    karim.age.call(rahim,2018);
+</script>
+</html>

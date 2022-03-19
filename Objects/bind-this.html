@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var customerObj={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        anotherObj:{
+            Name:"Alcurd Shank",
+            value:function(){
+                console.log("My Name is "+this.name);
+            }
+        }
+    }
+    //customerObj.anotherObj.value.bind(customerObj); bind return the definition of function; we can store it into variable
+    var anotherFunc=customerObj.anotherObj.value.bind(customerObj);
+    ///check anotherFunc()
+
+    ///bind can call arguments separately
+    var karim={
+        name:"Karim",
+        dob:1996,
+        age:function(currentYear,msg){
+            console.log(msg+" "+this.name+" is "+(currentYear-this.dob)+" years old ");
+        }
+    }
+    var rahim={
+        name:"Rahim Abdu",
+        dob:1986
+    }
+    var rahimAge=karim.age.bind(rahim,2018);
+    rahimAge("Hello world!");
+    var rahimAgeCalculator=karim.age.bind(rahim);
+    rahimAgeCalculator(2018,"Hello Dolly!");
+    ///we call call more like this
+    rahimAgeCalculator(2028,"Hello World1");
+    rahimAgeCalculator(2038,"Hello World2");
+    rahimAgeCalculator(2048,"Hello World3");
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var myCustomObj={
+        name:"Md. Raihan Alam",
+        age:21,
+        job:"Student",
+        anotherObj:{
+            name:"Zonayed Ahmed",
+            value:function(){
+                console.log("My name is "+this.name);
+            }
+        }
+    }
+    myCustomObj.anotherObj.value.apply(myCustomObj);// apply can take array as arguments
+    var karim={
+        name:"Karim Rahman",
+        dob:1996,
+        age:function(currentYear,msg){
+            console.log(msg+" "+this.name+" is "+(currentYear-this.dob)+" years old!");
+        }
+    }
+    var rahim={
+        name:"Rahim Abdu",
+        dob:1986,
+    }
+    karim.age(2018,"Hello Karim");
+    karim.age.apply(rahim,[2020,"Hello Rahim, "]);
+</script>
+</html>
