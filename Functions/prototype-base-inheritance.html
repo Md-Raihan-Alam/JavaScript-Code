@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var person=function(name,age,job){
+        this.name=name;
+        this.age=age;
+        this.job=job;
+    }
+    person.prototype.dateOfBirth=function(){
+        console.log(this.name+" born in "+(2022-this.age));
+    }
+    console.log(person.prototype);
+    var zawad=new person("Raihan",21,"Student");
+    zawad.dateOfBirth();
+</script>
+</html>
