@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    class Child{//class
+        //we can also call like this const Child=class{
+        constructor(name,dob){//constructor
+            console.log(this);
+            this.name=name;
+            this.dob=dob;
+        }
+        currentAge(){
+            console.log(`${this.name} is ${2022-this.dob} years old `);
+        }
+    }
+    const raihan=new Child("Md. Raihan Alam",2001);
+    console.log(raihan.currentAge());
+</script>
+</html>

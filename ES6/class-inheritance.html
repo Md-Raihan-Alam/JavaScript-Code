@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    class PersonClass{
+        constructor(name,age,job){
+            this.name=name;
+            this.age=age;
+            this.job=job;
+        }
+        dateOfBirth(){
+            console.log(`${this.name} is ${2022-this.age} years old `);
+        }
+    }
+    //inheritance
+    class TeacherMath extends PersonClass{
+        constructor(name,age,job,subject){
+            super(name,age,job);//summon them from parents class
+            this.subject=subject;
+        }
+    }
+    const ourSir=new TeacherMath("Rashed Sir",46,'Teacher','Math');
+    console.log(ourSir.dateOfBirth());
+    console.log(ourSir.subject);
+</script>
+</html>

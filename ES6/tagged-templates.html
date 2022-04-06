@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    let first="ham";
+    let second="pineapple";
+    let txt=f`I don't like pizza with ${first} and ${second}.`;
+//    function f(strings){->create a array
+    function f(strings,...expressions){
+    //    return strings;->return a array
+        return 'I do not like '+expressions.join(' and '); //join all array
+}
+   console.log(txt);
+</script>
+</html>

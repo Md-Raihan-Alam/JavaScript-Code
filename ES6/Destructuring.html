@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    const raihan=["MD. Raihan Alam",21,"Student"];
+    //destructuring
+    const [name,age,prof]=raihan;
+    console.log(name);
+    console.log(age);
+    console.log(prof);
+    const raihanObj={
+        nameObj:"MD. Raihan Alam",
+        ageObj:21,
+        profObj:"Student",
+    };
+    //destructuring object
+    const {nameObj,ageObj,profObj}=raihanObj;
+    console.log(nameObj);
+    console.log(ageObj);
+    console.log(profObj);
+    //for making diff name destructuring
+    const {nameObj:nameObjNew,ageObj:ageObjNew,profObj:profObjNew}=raihanObj;
+    console.log(nameObjNew);
+    console.log(ageObjNew);
+    console.log(profObjNew);
+    //for deep destruturing
+    var comObj={
+        anotherObj:{
+            anotherNewObj:{
+                title:"JavaScript ES6"
+            }
+        }
+    };
+    const {anotherObj:{anotherNewObj:{title}}}=comObj;
+    console.log(title);
+</script>
+</html>
