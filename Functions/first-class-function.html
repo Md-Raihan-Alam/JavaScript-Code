@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    function callMyName(name,callback){
+        var myAge=21;
+        callback(myAge);
+        console.log("Is it interesting, Mr. "+name);
+    }
+    function hello(age){
+        console.log("I am passed through argument and my age is: "+age);
+    }
+    callMyName("Raihan",hello);
+</script>
+</html>
