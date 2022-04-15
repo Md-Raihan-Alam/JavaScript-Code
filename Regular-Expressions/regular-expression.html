@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    const bText="A Normal Text";
+    const bText2="0123456789";
+    console.log(bText.match(/[aox]/));//[]= return as long as any character match but only first will return
+    console.log(bText.match(/[^abc]/));//^= return character that match first
+    console.log(bText2.match(/[0-9]/g));//[A-A] =match any character from this 'A' to this 'A'
+    console.log(bText.match(/[^0-9]/));//[^A-A] = match any character except from 'A' to 'A'
+</script>
+</html>

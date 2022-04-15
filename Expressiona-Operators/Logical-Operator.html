@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    ///OR Operator
+    console.log('Go to Class'||'Got to Visit');
+    console.log(undefined || 'Go to Visit');
+    console.log(''||'Eat');
+    const userOr={
+        name:"Zonayed Ahmed"
+    };
+    if(userOr.name){
+        console.log("Found");
+    }else console.log("Not found");
+    //it can be written like this
+    console.log(userOr.name || 'Not found');
+
+    //AND Operator
+    true && console.log('Eat');
+    false && console.log("Not Eat");
+    console.log('Me' && 'You');
+    console.log(false && 'Anything');
+    userOr.name && console.log("Name is "+userOr.name);
+</script>
+</html>
