@@ -16,5 +16,8 @@
     console.log(bText.match(/[^abc]/));//^= return character that match first
     console.log(bText2.match(/[0-9]/g));//[A-A] =match any character from this 'A' to this 'A'
     console.log(bText.match(/[^0-9]/));//[^A-A] = match any character except from 'A' to 'A'
+
+    const bText3="ab on bc, no meaning";
+    console.log(bText3.match(/(ab|bc)/g));//match ab or bc 
 </script>
 </html>

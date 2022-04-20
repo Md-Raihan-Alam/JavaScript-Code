@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    const mText='ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz\n\t01234567890!@#$%^&()';
+    console.log(mText.match(/./g));//.- select all character except new lines
+    console.log(mText.match(/\w/g));//select a-z,A-Z,0-9;
+    console.log(mText.match(/\W/g));//select except a-z,A-Z,0-9
+    console.log(mText.match(/\d/g));//select all digits
+    console.log(mText.match(/\D/g));//select except all digits
+    console.log(mText.match(/\s/g));//select all space
+    console.log(mText.match(/\S/g));//select except all space
+    console.log(mText.match(/\ba/g));//select word boundary for word 'a' start 
+    console.log(mText.match(/K\b/g));//select word boundary for word 'K' end 
+    console.log(mText.match(/\Ba/g));//select word boundary except word 'a' start
+    console.log(mText.match(/K\B/g));// select word boundary for word 'K' end
+    console.log(mText.match(/\0/g));// for null characters
+    console.log(mText.match(/\n/g));// for new lines
+</script>
+</html>
