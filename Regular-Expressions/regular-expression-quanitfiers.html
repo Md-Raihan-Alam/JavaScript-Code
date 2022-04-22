@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    const qText='aaaabcdefghijl09823456';
+    console.log(qText.match(/a+/g));//match character 'a' at least one time
+    console.log(qText.match(/dk*/g));//match if k is not present or present at least one time
+    console.log(qText.match(/jk?l/g));//match if even k is there or not(between j to l)
+    console.log(qText.match(/6$/g));//match if character '6' at last
+    console.log(qText.match(/^a/g));//match if a is at begining
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    const aPromiseRejection=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(true){
+                resolve('I am here!');
+            }else{
+                reject('No! I is an error!');
+            }
+        },5000);
+    });
+    //handle async and await
+    const promiseWithErrorHandle=async()=>{
+        try{
+            const data=await aPromiseRejection;
+            console.log(data);
+        }catch(err){
+            console.log(error);
+        }
+    }
+
+    //handle multiple promise
+    const promise1=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(true){
+                resolve('Promise 1 Resolve');
+            }else{
+                reject('Promise 1 Error');
+            }
+        },5000)
+    })
+    const promise2=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(true){
+                resolve('Promise 2 resolved');
+            }else{
+                reject('Promise 2 Error');
+            }
+        },5000)
+    })
+    //handling multiple promise
+    const handleMultiplePromise=async()=>{
+        const data=await Promise.all([promise1,promise2]);
+        console.log(data);
+    }
+</script>
+</html>

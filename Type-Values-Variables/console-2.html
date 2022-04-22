@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    //shows everything all list of properties in console
+    console.dir(console);
+    //for testing
+    console.assert(1==1,"Error");
+    console.assert(1==2,"Error");
+    //clear the console
+    console.clear();
+    //count how many time console was called
+    console.count();
+    //create error
+    console.error("Error created");
+    //keep everything under group
+    console.group('A Grouped console');
+    console.log('Normal console.log()');
+    console.error("Error created in group");
+    console.dir(console);
+    console.groupEnd();
+    //show info
+    console.info("A simple info");
+    //after %c all argument css applied
+    console.log("%cRaihan","font-size:50px;background-color:red;");
+    //create table
+    const arr=['Salam','Barkat','Rafiq','Jabbar'];//can be done for object as well
+    console.table(arr);
+    //create time
+    console.time();
+    for(var i=0;i<10000;i++) console.log('Fake time');
+    console.timeEnd();
+    //create warn
+    console.warn('A simple warn');
+</script>
+</html>

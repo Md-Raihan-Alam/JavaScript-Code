@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    try{//throw err if code have bug or run smoothly
+        consloe.fe('Hello');
+    }catch(err){//catch the error that try might throw or do not run this section
+        console.log("Error catched");
+        console.log(err);
+    }
+
+    age=13;
+    try{
+        if(age<18){
+            throw "Too young";//throw custom error
+        }else{
+            console.log(age);
+        }
+    }catch(err){
+        console.log(err);
+    }
+
+    try{
+        throw "error";
+    }catch(err){
+        console.log(err);
+    }finally{// forcefully run whether there is error or not
+        console.log("This code if forcefully run whether there is error or not");
+    }
+
+    //error object
+    age=13;
+    try{
+        if(age<18){
+            throw new Error("Too young");//this 'Error' is error object
+        }else{
+            console.log(age);
+        }
+    }catch(err){
+        console.log(err);
+    }
+</script>
+</html>
