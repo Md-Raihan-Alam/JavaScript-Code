@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" class="cls2" data-atr="box1" data-extra="attrToRemove">Tag
+        <ul>
+            <li>About this document</li>
+            <li>Hellow</li>
+            <li>flloe</li>
+        </ul>
+    </div>
+    <div id="box2" class="cls2 cls">Class</div>
+</body>
+<script type="text/javascript">
+    //id,class select
+    document.querySelector('#box');
+    document.querySelector('.cls');
+    //select by id
+    document.getElementById('box2');
+    //select all elements
+    document.querySelectorAll('.cls2');
+    //select by classname
+    document.getElementsByClassName('.cls2')[0];
+    //select by tag
+    document.getElementsByTagName('div');
+    //select by attribute
+    document.querySelector('[data-atr="box1"]');
+    //select by attributes
+    document.querySelector('[data-atr="box1"],[id="box2"]');
+    //select by pseudo-class
+    document.querySelector('li:first-child');
+    document.querySelector('li:first-child,li:last-child');
+    //select by children elments
+    //https://www.w3schools.com/jsref/prop_node_parentelement.asp
+    //https://www.javascripttutorial.net/javascript-dom/javascript-get-child-element/
+
+    //from parent to child
+    document.querySelector('#box ul')
+    //except his element
+    document.querySelector('#box:not(ul)');
+    //selecting multiple elments
+    document.querySelector('.box,#box3,#box3 ul');
+</script>
+</html>
