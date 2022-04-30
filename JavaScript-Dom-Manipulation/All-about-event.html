@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--event attribute method one-->
+    <button onclick="alert('This is created');">Button</button>
+    <!--event attribute method two-->
+    <button onclick="alertMe();">Button 2</button>
+
+    <button id="prac">Button 3</button>
+</body>
+<script type="text/javascript">
+    //alert box
+    alert('Working');
+    
+    //function
+    function alertMe(){
+        alert("From function");
+    }
+
+    //all event
+    const clickMeButton=document.querySelector('#prac');
+    console.dir(clickMeButton);
+
+    //activate event
+    //method one
+    clickMeButton.onmouseover=function(){
+        console.log('Mouse over');
+    }
+    //method two
+    clickMeButton.addEventListener('click',function(){
+        console.log('click');
+    })
+
+    //modify event
+    //stop event
+    clickMeButton.onClick=function(e){
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        console.log('button clicked');
+    };
+    //CHECK CHPATER 3 OF TOPIC 5 IN 'HATEKOLOME JAVASCRIPT'
+</script>
+</html>

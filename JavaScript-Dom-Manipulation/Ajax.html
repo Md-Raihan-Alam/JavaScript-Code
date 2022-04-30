@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="dataLoad">Click Me</button>
+    <ul></ul>
+</body>
+<script type="text/javascript">
+    //handling AJAX
+    // var request=new XMLHttpRequest();//instant obbject created
+    // request.open('GET','url',true);//open request
+    // request.send();//send request
+    // //handle request
+    // request.addEventListener('readystatechange',function(){
+        // let response=request.responseText;
+    //     console.log(request.responseText);//json but type is string
+            // let data=JSON.parse(response);
+    // });
+
+    //example
+    //from a site
+    document.querySelector('#dataLoad').addEventListener('click',()=>{
+        var newRequest=new XMLHttpRequest();
+        //check state
+        console.log(newRequest.readyState);
+        newRequest.open('GET','https://jsonplaceholder.typicode.com/posts',true);
+        console.log(newRequest.readyState);
+        newRequest.send();
+        newRequest.addEventListener('readystatechange',function(){
+            // console.log(newRequest.responseText);
+            //if connection is successful with site than request.status will always be 200
+            console.log(newRequest.readyState);
+            if(newRequest.readyState===4 && newRequest.status===200){
+                let response=newRequest.responseText;
+                let data=JSON.parse(response);
+                data.forEach((e)=>{
+                    let ele=document.createElement('li');
+                    ele.textContent=e.title;
+                    document.querySelector('ul').appendChild(ele);
+                })
+            }
+        });
+    });
+</script>
+</html>

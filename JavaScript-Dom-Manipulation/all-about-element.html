@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+<script type="text/javascript">
+    var selectBox=document.getElementById("box1");
+    //element attribute
+    console.dir(selectBox);
+    
+    //create element
+    var newParagraph=document.createElement('p');
+    console.log(newParagraph);
+    
+    //enter Text
+    newParagraph.textContent="Hello";
+    selectBox.innerText="Hi"
+    console.log(newParagraph);
+    //enter html
+    newParagraph.innerHTML=`<p>DOM</p>`;
+    
+    //adding-class
+    newParagraph.classList.add('new-div');
+    newParagraph.className+'old-new-div';
+    //check class
+    console.log(newParagraph.classList);
+    //remove class
+    newParagraph.classList.remove('new-div');
+    console.log(newParagraph);
+    newParagraph.classList.replace(/old-new-div/," ");
+    
+    //add new Attribute
+    newParagraph.setAttribute('data-str','someThing');
+    console.log(newParagraph);
+    //modify attribute
+    newParagraph.setAttribute('data-str',"someOtherThing");
+    //remove attribute
+    newParagraph.removeAttribute('data-str');
+    console.log(newParagraph);
+    newParagraph.removeAttribute('class');
+
+    //all about element style
+    console.dir(newParagraph.style)
+
+    //adding style
+    newParagraph.style.backgroundColor="red";
+    console.log(newParagraph);
+    newParagraph.style.color="blue";
+    console.log(newParagraph);
+    //modify style
+    newParagraph.style.backgroundColor="blue";
+    //remove style-cheat
+    newParagraph.style.backgroundColor="";
+
+    //adding tags
+    selectBox.insertAdjacentElement('beforeend',newParagraph);//check PAGE 344 IN 'HATEKOLOME JAVASCRIPT'
+    //adding child
+    selectBox.appendChild(newParagraph);//CHECK PAGE 347 IN 'HATEKOLOME JAVASCRIPT'
+    //for making the child at beginning
+    selectBox.insertBefore()//CHECK PAGE 347 IN 'HATEKOLOME JAVASCRIPT'
+
+    //remove elements
+    newParagraph.previousSibling.remove();
+    //check child node
+    console.log(newParagraph.childNodes);
+    //remove child
+    selectBox.removeChild(newParagraph);
+
+    //siblings
+    newParagraph.previousSibling
+    newParagraph.nextSibling
+    //parents
+    newParagraph.parentElement
+</script>
+</html>
