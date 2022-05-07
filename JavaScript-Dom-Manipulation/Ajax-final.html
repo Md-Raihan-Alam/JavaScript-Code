@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="getFrom">
+        <input type="text" name="name" id="name">
+        <input type="submit" value="submit">
+    </form>
+</body>
+<script type="text/javascript">
+    //LOCAL JSON
+    var xhr=new XMLHttpRequest();
+    xhr.open('GET','user.json',true);
+    xhr.send();
+    xhr.onload=function(){
+        console.log('loading');
+    }
+    xhr.onerror=function(){
+        console.log('error');
+    }
+    xhr.onreadystatechange=function(){
+        if(xhr.status===200 && xhr.readyState===4){
+            console.log(JSON.parse(xhr.responseText));
+        }
+    }
+    
+    // PHP Forms
+    document.querySelector('#getFrom').addEventListener('submit',function(e){
+        e.preventDefault();
+        var name=document.getElementsById('name').value;
+        var xhr2=new XMLHttpRequest();
+        xhr2.open('GET','process.php?name='+name,true);
+        xhr2.send();
+        xhr2.onload=function(){
+            console.log('loading');
+        }
+        xhr2.onerror=function(){
+            console.log('error');
+        }
+        xhr2.onreadystatechange=function(){
+            if(xhr2.readyState===4 && xhr2.status===200){
+                console.log(JSON.parse(xhr2.responseText))
+            }
+        }
+    });
+    //POST
+    document.querySelector('#getFrom').addEventListener('submit',function(e){
+        e.preventDefault();
+        var name=document.getElementsById('name').value;
+        var params="name"+name;
+        var xhre=new XMLHttpRequest();
+        xhr3.open('POST','process.php',true);
+        xhr3.setRequestHeader('content-type','application/x-www-form-urlencoded');
+        xhr3.onload=function(){
+            console.log('loading');
+        }
+        xhr3.onerror=function(){
+            console.log('error');
+        }
+        xhr3.onreadystatechange=function(){
+            if(xhr3.readyState===4 && xhr3.status===200){
+                console.log(JSON.parse(xhr2.responseText))
+            }
+        }
+        xhr3.send(params);
+    });
+
+    //FROM A DATABASE
+    var xhr4=new XMLHttpRequest();
+    xhr4.open('GET','DATABASE.php',true);
+    xhr4.send();
+    xhr4.onload=function(){
+        console.log('loading');
+    }
+    xhr4.onerror=function(){
+        console.log('error');
+    }
+    xhr4.onreadystatechange=function(){
+        if(xhr4.readyState===4 && xhr4.status===200){
+            let users=JSON.parse(xhr4.responseText);
+            for( let i in users){
+                console.log(users[i].id);
+            }
+        }
+    }
+</script>
+</html>

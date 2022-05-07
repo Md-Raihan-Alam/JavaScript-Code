@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    /*
+    var truevar = 1; // A properly declared global variable, nondeletable.
+    fakevar = 2; // Creates a deletable property of the global object.
+    this.fakevar2 = 3; // This does the same thing.
+    delete truevar // => false: variable not deleted
+    delete fakevar // => true: variable deleted
+    delete this.fakevar2 // => true: variable deleted
+    */
+    var truevar=1;
+    fakevar=2;
+    this.fakevar2=3;
+    console.log(truevar)
+    console.log(fakevar)
+    console.log(this.fakevar2)
+    delete truevar
+    delete fakevar
+    delete this.fakevar2
+    console.log(truevar)
+    console.log(fakevar)
+    console.log(this.fakevar2)
+</script>
+</html>

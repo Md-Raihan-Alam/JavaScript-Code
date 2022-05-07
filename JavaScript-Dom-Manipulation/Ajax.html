@@ -23,7 +23,7 @@
     // });
 
     //example
-    //from a site
+    //EXTERNAR API
     document.querySelector('#dataLoad').addEventListener('click',()=>{
         var newRequest=new XMLHttpRequest();
         //check state
@@ -31,6 +31,14 @@
         newRequest.open('GET','https://jsonplaceholder.typicode.com/posts',true);
         console.log(newRequest.readyState);
         newRequest.send();
+        //Optional- used for loaders
+        newRequest.addEventListener('progress',function(){
+            console.log('loading');
+        });
+        //on error
+        newRequest.addEventListener('error',function(){
+            console.log("Error");
+        });
         newRequest.addEventListener('readystatechange',function(){
             // console.log(newRequest.responseText);
             //if connection is successful with site than request.status will always be 200

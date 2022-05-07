@@ -14,5 +14,23 @@
     Number("32");
     String(312);
     Boolean(3);
+
+    //Binary conversion
+    var n = 17;
+    binary_string = n.toString(2); // Evaluates to "10001"
+    octal_string = "0" + n.toString(8); // Evaluates to "021"
+    hex_string = "0x" + n.toString(16); // Evaluates to "0x11"
+
+    //Scientific Conversion
+    var n = 123456.789;
+    n.toFixed(0); // "123457"
+    n.toFixed(2); // "123456.79"
+    n.toFixed(5); // "123456.78900"
+    n.toExponential(1); // "1.2e+5"
+    n.toExponential(3); // "1.235e+5"
+    n.toPrecision(4); // "1.235e+5"
+    n.toPrecision(7); // "123456.8"
+    n.toPrecision(10); // "123456.7890"
+
 </script>
 </html>
