@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var geval=eval;//Using another name does a global eval
+    var x="global",y="global";//Tow global variables
+    function f(){//This function does a local eval
+        var x="local";//Define a local variable
+        eval("x+='Changed';");//Direct eval sets local variables
+        return x;//Return changed local variable
+    }
+    function g(){//This function does a global eval
+        var y="local";//A local variable
+        geval("y+='changed';");//Indirect eval sets global variable
+        return y;//Return unchagned local vriable
+    }
+    console.log(f(),x);//Local variable changed: prints"localchanged global"
+    console.log(g(),y);//GLoval variable changed: prints "lcoal globalchagned"
+</script>
+</html>

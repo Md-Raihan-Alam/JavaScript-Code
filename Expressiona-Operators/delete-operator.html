@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var o = { x: 1, y: 2}; // Start with an object
+    console.log(delete o.x); // Delete one of its properties
+    "x" in o // => false: the property does not exist anymore
+    var a = [1,2,3]; // Start with an array
+    delete a[2]; // Delete the last element of the array
+    console.log(a.length) // => 2: array only has two elements no
+</script>
+</html>
